@@ -51,8 +51,9 @@ to come
   - Note that a sample CSV has been provided that you may edit for your needs.
 
 ## Troubleshooting
+- Sudden pop-ups on your computer can confuse _VEP MIDI AutoMate_, especially when it is trying to detect changes to UI elements. Open _Vienna Ensemble Pro 7_ on a screen that is unlikely to be affected by pop-ups.
 - If something goes wrong and _VEP MIDI AutoMate_ times out while inputting your MIDI controller mappings (usually after 10 seconds), the most likely issue is that the destination items in your CSV (_layer 1_, _layer 2_, _layer 3_, _layer 4_) are not spelt the same as they appear in _Vienna Ensemble Pro 7_. Misspelling will mean that _VEP MIDI AutoMate_ cannot find the destination for the MIDI controller mapping, and so will get confused.
-- If you still run into a problem, please contact me. I have only tested  _VEP MIDI AutoMate_ on my own devices.
+- If you still run into any issues, please let me know. I have only tested  _VEP MIDI AutoMate_ on my own devices, so I would like to know of any issues caused for other users.
 
 ## Known limitations
 - Windows only (PyAutoGUI/PyWin specifics); macOS ports welcome.

@@ -72,4 +72,4 @@ to come
 
 ## License
 Copyright © Robert Russell.
-Licensed under Apache-2.0. See [LICENSE](https://link.com/).
+Licensed under Apache-2.0. See [LICENSE](https://github.com/robertrussell22/VEP-MIDI-AutoMate/blob/main/LICENSE).

@@ -296,8 +296,11 @@ def go(path, abort_event, slow_mode, update_callback, required_headers, BULLET):
         check_abort(abort_event)
 
         # remove unnecessary sub-windows
-        pag.keyDown("alt")
-        pag.press("h") # Help menu
+        _, (_, y), _ = find_nth_colour_band(image=image,n=0,start_position=(0,0),direction=(0,1))
+        _, (x, _), _ = find_nth_colour_band(image=image,n=1,start_position=(0,y),direction=(1,0))
+        pag.moveTo((window_origin[0] + x, window_origin[1] + y)) # File menu
+        pag.click()
+        pag.press('left') # Help menu
         pag.keyUp("alt")
         pag.press('left') # View menu
         for _ in range(7):

@@ -277,7 +277,7 @@ def on_close():
     root.destroy()
 
 root = tk.Tk()
-root.geometry('1100x880')
+root.geometry('1100x900')
 root.minsize(410, 230)
 root.title(f'{APP_NAME} {VERSION}')
 
@@ -342,7 +342,7 @@ instructions_text = (
     f' {BULLET} Choose your CSV file below.\n'
     f' {BULLET} Click "Let\'s AutoMate ▶" and do not touch your mouse or keyboard, except to press \'{ABORT_HOTKEY_STRING}\' to abort at any time.\n\n'
     'What ' + APP_NAME + ' will do:\n'
-    + APP_NAME + ' will take control of your mouse and keyboard and use screen-grabs to link up the MIDI automation stored in your CSV file using the following algorithm.\n'
+    + APP_NAME + ' will take control of your mouse and keyboard and use screenshots to transfer the MIDI automation stored in your CSV file using the following algorithm.\n'
     f' {BULLET} import CSV file\n'
     f' {BULLET} find VEP window, maximise, bring to front, check for active instance, reset layout, maximise \'MIDI Controllers\' section \n'
     f' {BULLET} delete all current MIDI automation rows\n'
@@ -353,13 +353,13 @@ instructions_text = (
     f'    {BULLET} input destination items\n\n'
     'Advice:\n'
     f' {BULLET} You can watch a video walkthrough on GitHub.\n'
-    f' {BULLET} Sudden pop-ups on your computer can confuse. Open VEP on a screen that is unlikely to see these.\n'
+    f' {BULLET} Open VEP on a screen that is unlikely to see pop-ups, which may disrupt the automation.\n'
     f' {BULLET} {APP_NAME} is designed to work as quickly as possible, so use \'slow mode\' if you want to watch more carefully.\n'
     f' {BULLET} {APP_NAME} operates fastest when it is on a separate monitor to VEP.\n'
     f' {BULLET} Use the provided example.csv as a template for your CSV file; it has the necessary column headings.\n'
     f' {BULLET} If {APP_NAME} fails, it is most likely that something in your CSV file is not spelt correctly.\n'
     f' {BULLET} Avoid mixer channel names that are likely to collide with plugin names or parameters, this might lead to confusion during the destination input stage.\n'
-    f' {BULLET} Use GitHub to report any issues and/or send your appreciation.'
+    f' {BULLET} Report issues or share feedback on GitHub.'
     )
 
 instructions = tk.Label(wrapper, text=instructions_text, justify='left', anchor='w', wraplength=1)

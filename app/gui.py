@@ -3,13 +3,11 @@
 # https://github.com/robertrussell22/VEP-MIDI-AutoMate
 ###
 
-import json, os, threading, keyboard, queue, webbrowser, csv
+import json, os, threading, keyboard, queue, webbrowser, csv, core
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 from functools import partial
-
-import core
 
 APP_NAME = 'VEP MIDI AutoMate'
 VERSION = '1.0.0'
@@ -279,7 +277,7 @@ def on_close():
     root.destroy()
 
 root = tk.Tk()
-root.geometry('1100x800')
+root.geometry('1100x880')
 root.minsize(410, 230)
 root.title(f'{APP_NAME} {VERSION}')
 
@@ -355,12 +353,13 @@ instructions_text = (
     f'    {BULLET} input destination items\n\n'
     'Advice:\n'
     f' {BULLET} You can watch a video walkthrough on GitHub.\n'
-    f' {BULLET} Sudden popups on your computer can confuse. Open VEP on a screen that is unlikely to see these.\n'
-    f' {BULLET} This is designed to work as quickly as possible, so use \'slow mode\' if you want to watch more carefully.\n'
-    f' {BULLET} Use the provided data.csv as a template for your CSV file; it has the necessary column headings.\n'
+    f' {BULLET} Sudden pop-ups on your computer can confuse. Open VEP on a screen that is unlikely to see these.\n'
+    f' {BULLET} {APP_NAME} is designed to work as quickly as possible, so use \'slow mode\' if you want to watch more carefully.\n'
+    f' {BULLET} {APP_NAME} operates fastest when it is on a separate monitor to VEP.\n'
+    f' {BULLET} Use the provided example.csv as a template for your CSV file; it has the necessary column headings.\n'
     f' {BULLET} If {APP_NAME} fails, it is most likely that something in your CSV file is not spelt correctly.\n'
-    f' {BULLET} Avoid mixer channel names that are the same as plugin names or settings, this might lead to confusion during the destination input stage.\n'
-    f' {BULLET} Use GitHub to report any problems and/or send your appreciation.'
+    f' {BULLET} Avoid mixer channel names that are likely to collide with plugin names or parameters, this might lead to confusion during the destination input stage.\n'
+    f' {BULLET} Use GitHub to report any issues and/or send your appreciation.'
     )
 
 instructions = tk.Label(wrapper, text=instructions_text, justify='left', anchor='w', wraplength=1)
@@ -370,7 +369,7 @@ def _sync_wrap(event):
 instructions.bind('<Configure>', _sync_wrap)
 
 github_link = tk.Label(wrapper, text='Open GitHub for documentation, tips, and updates.', font=('TkDefaultFont', 9, 'underline'), fg=PALETTES[theme.get()]['link'], cursor='hand2')
-github_link.grid(row=1, column=0, sticky='e')
+github_link.grid(row=1, column=0, sticky='w')
 def _hover_on(event):
     palette = PALETTES[theme.get()]
     github_link.config(fg=palette['accent'], cursor='hand2')

@@ -2,13 +2,13 @@
 Windows GUI to auto-populate MIDI Controller mappings in _Vienna Ensemble Pro 7_ from a CSV file. Windows-only (for now); macOS contributions welcome.
 
 ## Download the latest release
-[VEP MIDI Automate 1.0.0](https://link.com/)
+[VEP MIDI Automate 1.0.0](https://github.com/robertrussell22/VEP-MIDI-AutoMate/releases/tag/1.0.0)
 
 ## Walkthrough video
 to come
 
 ## Quick start
-- Download _VEP MIDI AutoMate_ [here](https://link.com/).
+- Download _VEP MIDI AutoMate_ [here](https://github.com/robertrussell22/VEP-MIDI-AutoMate/releases/tag/1.0.0).
 - Open _Vienna Ensemble Pro 7_ (**on a screen with scaling set to 100%**) and load/start your project.
 - Take the example CSV, populate it with your desired MIDI controller mappings, and save.
 - Run _VEP MIDI AutoMate_.

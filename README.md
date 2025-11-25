@@ -10,10 +10,10 @@ to come
 ## Quick start
 - Download _VEP MIDI AutoMate_ [here](https://link.com/).
 - Open _Vienna Ensemble Pro 7_ (**on a screen with scaling set to 100%**) and load/start your project.
-- Take the sample CSV, populate it with your desired MIDI controller mappings, and save.
+- Take the example CSV, populate it with your desired MIDI controller mappings, and save.
 - Run _VEP MIDI AutoMate_.
 - Click "Browse..." and locate your CSV file.
-- Click "Let’s AutoMate ▶" and watch your MIDI controller mapping populate.
+- Click "Let’s AutoMate ▶" and watch your MIDI controller mappings populate.
 
 ## What _VEP MIDI AutoMate_ does
 - Loads and reads a CSV of your desired MIDI controller mappings (see below for instructions on how this CSV should appear).
@@ -25,16 +25,16 @@ to come
 - Next, _VEP MIDI AutoMate_ will investigate the left-side menu layout of _Vienna Ensemble Pro 7_ as it appears on your screen; counting and noting the on-screen positions of MIDI ports, devices and internal cables, and determining the relative positions of all sub-menu items. This will normally take about 5 seconds.
 - Finally, for each row in your CSV, the following actions will take place.
   - A new row will be created, scrolling down if required.
-  - The _DEVICE_ | _CHANNEL_ | _CONTROLLER_ | _CC_ menus will be progressed through with the mouse according to the numbers in your CSV for the columns _device_, _channel_ and _cc_. Note that only the device _number_ should be entered into the CSV, not the device name; the number will be used to inform the mouse as to where it should move by calculating the position of the device item in the first main menu. See the video walkthrough above for more details about this.
-  - After the right-side column has been clicked on, the _DESTINATION_ will be populated by sequentially typing the contents stored in the _layer 1_, _layer 2_, _layer 3_, _layer 4_ columns of the CSV as required. More specifically:
-    - The contents of _layer 1_ (the mixer channel name) will be entered into the search bar. This must appear in your CSV exactly as it will be written in the final destination, including the preceding mixer channel number, such as "1 Violin". Note, choosing a mixer channel name that is likely to collide with a plugin name or parameter may cause issues, as other items may appear in the filtered list. You can check this by ensuring that manually typing the contents of _layer 1_ into the destination searchbar filters out all entries apart from the mixer channel you are aiming for. If a problem is likely, consider temporarily renaming your mixer channel names while using _VEP MIDI AutoMate_. Please see the video walkthrough above for more information. Then, the keyboard will be pressed down once to select the mixer channel, and the destination input text will be deleted. This still preserves the selection of the mixer channel.
+  - The _DEVICE_ | _CHANNEL_ | _CONTROLLER_ | _CC_ menus will be progressed through with the mouse according to the numbers in your CSV for the columns _device_, _channel_ and _cc_. Note that only the device _number_ should be entered into the CSV, not the device name.
+  - The _DESTINATION_ will be populated by sequentially typing the contents stored in the _layer 1_, _layer 2_, _layer 3_, _layer 4_ columns of the CSV as required. More specifically:
+    - The contents of _layer 1_ (the mixer channel name) will be entered into the search bar. This must appear in your CSV exactly as it will be written in the final destination, including the preceding mixer channel number, such as "1 Violin". Note, choosing a mixer channel name that is likely to collide with a plugin name or parameter may cause issues, as other items may appear in the filtered list. Then, the down key will be pressed once to select the mixer channel, and the destination input text will be deleted.
     - The above process is then repeated for _layer 2_, which will select the next layer of the destination, which will either be a mixer channel parameter (such as "Mute"), a VST (such as "Vienna Synchron Player") or the "FX" or "Send x" grouping.
     - If required, the above process is repeated for _layer 3_ and _layer 4_.
-    - In cases where the final layer describes a parameter which appears more the once in the filtered, a number in the _repeat_ column of your CSV will indicate how many additional keyboard down presses are to occur. Please see the video walkthrough to understand why this might be needed.
-- To halt _VEP MIDI AutoMate_, you can press Ctrl+F12 at any time. If you run into any serious problems, quickly move your mouse to the top-left of the screen to cause an error, and _VEP MIDI AutoMate_ will be forced to stop.
+    - In cases where the final layer describes a parameter which appears more the once in the filtered list, a number in the _repeat_ column of your CSV will indicate how many additional keyboard down presses are to occur.
+- To halt _VEP MIDI AutoMate_, you can press Ctrl+F12 at any time. If you run into any serious problems, quickly move your mouse to the top-left corner of the screen to force an error, and _VEP MIDI AutoMate_ will stop.
 - _VEP MIDI AutoMate_ will display an update of progress and estimated time to finish.
 - Checking "Slow mode" will inject a pause between all UI events. Use this if you want to watch more carefully how _VEP MIDI AutoMate_ works.
-- "Light mode" and "Dark mode" is available, but make no difference to functionality.
+- "Light mode" and "Dark mode" are available, but make no difference to functionality.
 - Upon close, your settings (CSV location, slow mode, light/dark mode) will be saved in C:\Users\your_name\AppData\Roaming\VEP MIDI AutoMate.
 
 ## Requirements
@@ -57,7 +57,9 @@ to come
 
 ## Known limitations
 - Windows only (PyAutoGUI/PyWin specifics); macOS ports welcome.
-- Requires 100% screen scaling.
+- _VEP MIDI AutoMate_ operates more slowly when on the same screen as (and hidden from) _Vienna Ensemble Pro 7_.
+- Occasionally, _VEP MIDI AutoMate_ will insiston  an active instance in _Vienna Ensemble Pro 7_ when one exists. If this happens, close and start again.
+- Requires 100% screen scaling on the screen containing _Vienna Ensemble Pro 7_.
 - UI changes in future releases of _Vienna Ensemble Pro 7_ may require updates.
 
 ## Roadmap
@@ -69,7 +71,7 @@ to come
 
 ## Privacy and safety
 - _VEP MIDI AutoMate_ does not use the network or upload files.
-- _VEP MIDI AutoMate_ programmatically controls your mouse and keyboard; don't use your device while it runs.
+- _VEP MIDI AutoMate_ programmatically controls your mouse and keyboard; don't use your device while it runs, except to press Ctrl+F12 to halt.
 
 ## License
 Copyright © Robert Russell.

@@ -1,0 +1,10 @@
+device,channel,cc,layer 1,layer 2,layer 3,layer 4,repeat
+1,1,11,1 Synth,CS-80 V4,Master Volume,,
+1,1,0,1 Synth,CS-80 V4,ModWheel Speed,,
+1,2,0,2 Piano,KeysOfThe70s,Chorus,,
+1,2,1,2 Piano,KeysOfThe70s,Drive Gain,,
+1,2,11,2 Piano,Send 1,Volume,,
+1,2,2,2 Piano,FX,1 Vienna Compressor Pro,1:Threshold,
+1,2,3,2 Piano,FX,1 Vienna Equalizer Pro,1:1:Freq,
+1,2,4,2 Piano,FX,1 Vienna Equalizer Pro,Bypass,1
+2,1,0,3 Final Mix,Mute,,,

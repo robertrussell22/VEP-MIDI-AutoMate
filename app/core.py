@@ -517,9 +517,7 @@ def go(path, abort_event, slow_mode, update_callback, required_headers, BULLET):
             # select device
             device_position_x, device_position_y = device_positions[int(data[row_number]['device'])]
             image_device = screenshot(scope='desktop', region=menu_region)
-            # temp_time = time.time()
             _, bounding_box = crop_by_largest_difference(image_main, image_device)
-            # print(1000*(time.time() - temp_time))
             pag.moveTo(menu_region[0] + bounding_box[0] + device_position_x, menu_region[1] + bounding_box[1] + device_position_y)
             wait_for_menu_item_to_turn_blue(blue_pixel, average_item_height)
             check_abort(abort_event)

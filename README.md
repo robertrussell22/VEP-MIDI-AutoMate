@@ -5,7 +5,7 @@ Windows GUI to auto-populate MIDI Controller mappings in _Vienna Ensemble Pro 7_
 [VEP MIDI Automate 1.0.0](https://github.com/robertrussell22/VEP-MIDI-AutoMate/releases/tag/1.0.0)
 
 ## Walkthrough video
-to come
+[![VEP MIDI AutoMate Walkthrough](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJbvuNsLImG0)](https://www.youtube.com/watch?v=JbvuNsLImG0)
 
 ## Quick start
 - Download _VEP MIDI AutoMate_ [here](https://github.com/robertrussell22/VEP-MIDI-AutoMate/releases/tag/1.0.0).

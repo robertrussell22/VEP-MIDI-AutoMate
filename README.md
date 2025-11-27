@@ -58,7 +58,7 @@ Windows GUI to auto-populate MIDI Controller mappings in _Vienna Ensemble Pro 7_
 ## Known limitations
 - Windows only (PyAutoGUI/PyWin specifics); macOS ports welcome.
 - _VEP MIDI AutoMate_ operates more slowly when on the same screen as (and hidden from) _Vienna Ensemble Pro 7_.
-- Occasionally, _VEP MIDI AutoMate_ will insiston  an active instance in _Vienna Ensemble Pro 7_ when one exists. If this happens, close and start again.
+- Occasionally, _VEP MIDI AutoMate_ will insist on an active instance in _Vienna Ensemble Pro 7_ when one exists. If this happens, close and start again.
 - Requires 100% screen scaling on the screen containing _Vienna Ensemble Pro 7_.
 - UI changes in future releases of _Vienna Ensemble Pro 7_ may require updates.
 
